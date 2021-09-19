@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <title>Survey Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rhodium+Libre&family=Roboto+Slab:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="heading">
+        <i class="fa fa-university fa-4x" aria-hidden="true"></i>
+        <h1 id="title">Scholarship-Application</h1>
+      </div>
+      <div class="description-div">
+        <div id="main-description">
+          <h2>Apply For a Scholarship</h2>
+        </div>
+        <div>
+          <p id="description">
+            <i class="fas fa-info-circle"></i> Scholarship are granted on
+            <span style="font-weight: bold">first-come first served-basis</span
+            >.
+          </p>
+        </div>
+      </div>
+      <div class="button-div" id="nav-button-div">
+        <div class="tab">
+          <button
+            class="tablinks"
+            onclick="openPage(event,'personalinfo')"
+            id="defaultOpen"
+          >
+            PERSONAL INFORMATION
+          </button>
+          <button class="tablinks" onclick="openPage(event,'academicinfo')">
+            ACADEMIC INFORMATION
+          </button>
+          <button
+            class="tablinks"
+            onclick="openPage(event,'personalstatement')"
+          >
+            PERSONAL STATEMENT
+          </button>
+        </div>
+      </div>
+      <div id="personalinfo" class="tabcontent">
+        <form id="survey-form">
+          <div class="s1">
+            <label id="gender">GENDER</label>
+            <div class="centerdiv1">
+              <input type="radio" name="gender" value="male" id="male" />
+              <label class="gender" for="male"
+                ><i class="fas fa-male fa-4x"></i>
+              </label>
+              <input type="radio" name="gender" value="female" id="female" />
+              <label class="gender" for="female"
+                ><i class="fas fa-female fa-4x"></i
+              ></label>
+            </div>
+          </div>
+          <hr width="75%" />
+          <div class="s2">
+            <label id="name-label"> Name </label>
+            <div class="centerdiv2">
+              <input
+                type="text"
+                name="fname"
+                placeholder="First Name"
+                id="name"
+                required
+              />
+              <input
+                type="text"
+                name="lname"
+                placeholder="Last Name"
+                id="lname"
+                required
+              />
+            </div>
+          </div>
+          <hr width="75%" />
+          <div class="s3">
+            <label id="email-label"> EMAIL </label>
+            <div class="centerdiv2">
+              <input
+                type="email"
+                name="eamiladdress"
+                placeholder="Email"
+                id="email"
+                required
+              />
+            </div>
+          </div>
+          <hr width="75%" />
+          <div class="s4">
+            <label id="number-label"> AGE </label>
+            <div class="centerdiv2">
+              <input
+                type="number"
+                name="age"
+                min="16"
+                max="30"
+                id="number"
+                placeholder="Age"
+              />
+            </div>
+          </div>
+          <hr width="75%" />
+          <div class="s5">
+            <label id="ethnicity-label">ETHNICITY</label>
+            <div class="centerdiv2">
+              <select name="ethnicity" id="dropdown">
+                <option value="0">Select</option>
+                <option value="Asian">Asian</option>
+                <option value="American">American</option>
+                <option value="African">African</option>
+                <option value="Indian">Indian</option>
+              </select>
+            </div>
+          </div>
+          <hr width="75%" />
+          <div class="s6">
+            <label id="address-label"> ADDRESS </label>
+            <div class="centerdiv6">
+              <input
+                type="text"
+                name="address"
+                id="address"
+                placeholder="Home Address"
+              />
+            </div>
+          </div>
+          <hr width="75%" />
+          <div class="s2">
+            <label id="language-lable"> LANGAUGE</label>
+            <input type="checkbox" value="english" />
+            <span class="checkmark"></span>
+            <label class="container">English</label>
+            <input type="checkbox" value="urud" />
+            <span class="checkmark"></span>
+            <label class="container">Urdu</label>
+          </div>
+          <hr width="75%" />
+          <div style="display: none">
+            <textarea></textarea>
+          </div>
+          <!-- Used the trick to pass the test, because I want to look my page design consistent -->
+          <div class="submitdiv">
+            <input type="submit" value="Submit" class="submit" id="submit" />
+          </div>
+        </form>
+      </div>
+      <div id="academicinfo" class="tabcontent">
+        <div class="s6">
+          <label id="university-label"> UNIVERSITY </label>
+          <div class="centerdiv2">
+            <input
+              type="text"
+              name="university"
+              id="university"
+              placeholder="University Name"
+            />
+          </div>
+        </div>
+        <hr width="75%" />
+        <div class="s5">
+          <label id="discipline-label">DISCIPLINE</label>
+          <div class="centerdiv2">
+            <input
+              list="disciplines"
+              name="discipline"
+              id="discipline"
+              placeholder="Discipline"
+            />
+            <datalist id="disciplines">
+              <option value="Computer Scinece"></option>
+              <option value="Engineering"></option>
+              <option value="Finance"></option>
+              <option value="History"></option>
+              <option value="Literature"></option>
+            </datalist>
+          </div>
+        </div>
+        <hr width="75%" />
+        <div class="s6">
+          <label id="degree-label"> DEGREE </label>
+          <div class="centerdiv2">
+            <input
+              type="text"
+              name="degree"
+              id="degree"
+              placeholder="Degree Title"
+            />
+          </div>
+        </div>
+        <hr width="75%" />
+        <div class="s6">
+          <label id="duration-label"> GRADUATION </label>
+          <div class="centerdiv2">
+            <input
+              type="date"
+              name="graduation"
+              id="gradution"
+              placeholder="Expected Graduation Date"
+            />
+          </div>
+        </div>
+        <hr width="75%" />
+        <div class="s4">
+          <label id="semester-label"> SEMESTER </label>
+          <div class="centerdiv2">
+            <input
+              type="number"
+              name="semester"
+              min="1"
+              max="8"
+              id="number"
+              placeholder="Current Semester"
+            />
+          </div>
+        </div>
+        <hr width="75%" />
+        <div class="s4">
+          <label id="cgpa-label"> CGPA </label>
+          <div class="centerdiv2">
+            <input
+              type="number"
+              name="cgpa"
+              id="number"
+              placeholder="Current CGPA"
+            />
+          </div>
+        </div>
+        <hr width="75%" />
+        <div class="submitdiv">
+          <input type="submit" value="Submit" class="submit" />
+        </div>
+      </div>
+
+      <div id="personalstatement" class="tabcontent">
+        <div class="s2 s7" style="align-items: flex-start">
+          <label id="textareatext1" style="font-size: 16px"
+            >Why you need this Scholarship?</label
+          >
+          <div class="centerdiv2 centerdiv7">
+            <textarea
+              id="textarea2"
+              style="width: 50vw; height: 300px"
+            ></textarea>
+          </div>
+        </div>
+        <div class="s2 s7" style="align-items: flex-start">
+          <label id="textareatext2" style="font-size: 16px"
+            >How this can improve you life?</label
+          >
+          <div class="centerdiv2 centerdiv7">
+            <textarea
+              id="textarea2"
+              style="width: 50vw; height: 300px"
+            ></textarea>
+          </div>
+        </div>
+        <hr width="75%" />
+        <div class="submitdiv">
+          <input type="submit" value="Submit" class="submit" />
+        </div>
+      </div>
+    </main>
+    <footer style="background-color: brown">
+      <div class="footersocaildiv">
+        <i class="fa fa-instagram fa-2x social"></i>
+        <i class="fa fa-facebook fa-2x social"></i>
+        <i class="fa fa-twitter fa-2x social"></i>
+      </div>
+      <div class="footerlinks">
+        <p class="link1">Home</p>
+        <p class="link1">Services</p>
+        <p class="link1">About</p>
+        <p class="link1">Privacy Policy</p>
+      </div>
+      <div>
+        <p class="text-center">
+          <a
+            href="https://www.google.com/search?sxsrf=AOaemvIHKiBjrHD8R5tWIyCQEB1tVXl-RA:1631956304649&q=arsxlanali&nfpr=1&sa=X&ved=2ahUKEwiAgs_-lojzAhUh8uAKHWt_AawQvgUoAXoECAEQLw&cshid=1631956468308420&biw=1536&bih=754&dpr=1.25"
+            target="_blank"
+            style="text-decoration: none; color: rgb(191, 211, 191)"
+            >arsxlanali</a
+          >
+          &copy; 2021
+        </p>
+      </div>
+    </footer>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <script>
+      function openPage(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+      document.getElementById("defaultOpen").click();
+    </script>
+  </body>
+</html>

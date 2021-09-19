@@ -1,0 +1,288 @@
+body {
+  margin: 0 0;
+  padding: 0 0;
+  background-color: white;
+}
+
+/* * {
+  border: 1px solid black;
+} */
+
+/* Heading  */
+
+.heading {
+  background-image: url(./cover.jpg);
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  padding-top: 70px;
+  color: white;
+  font-family: "Rhodium Libre", serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* description */
+
+.description-div {
+  margin-left: 15%;
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  padding: 30px 0;
+}
+
+#main-description {
+  color: black;
+  font-family: "Rhodium Libre", serif;
+  text-transform: uppercase;
+  text-align: left;
+}
+#description {
+  padding-right: 20vw;
+  font-family: "Roboto", sans-serif;
+}
+
+/* button section */
+
+.button-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 7px;
+  background-color: #b5c3c83d;
+}
+
+button.tablinks {
+  width: 24vw;
+  height: 8vh;
+  border: none;
+  background-color: #f48c34;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  font-family: "Rhodium Libre", serif;
+}
+
+button.tablinks:focus {
+  background-color: #dc444a;
+}
+
+#nav-button-div {
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Radio button id */
+
+#button1,
+#button2,
+#button3 {
+  display: none;
+}
+
+button:hover {
+  background-color: #dc444a;
+}
+#button1:checked + label > button {
+  background-color: #dc444a;
+}
+#button2:checked + label > button {
+  background-color: #dc444a;
+}
+#button3:checked + label > button {
+  background-color: #dc444a;
+}
+
+/* form-section */
+
+.s1 input {
+  position: absolute;
+  display: none;
+  cursor: pointer;
+}
+
+i.fa-male,
+i.fa-female {
+  color: #b5c3c885;
+  border-radius: 50%;
+  background-color: #b5c3c83d;
+  width: 80px;
+  height: 70px;
+  text-align: center;
+  padding-top: 7px;
+  border: 1px solid #b5c3c83d;
+  cursor: pointer;
+  font-size: 62px;
+}
+
+i.fa-male:hover,
+i.fa-female:hover {
+  background-color: rgba(231, 154, 180, 0.637);
+  color: white;
+  border: white;
+}
+
+#male:checked + label > i,
+#female:checked + label > i {
+  background-color: rgba(231, 154, 180, 0.637);
+  color: white;
+  border: white;
+}
+
+.s1,
+.s2,
+.s3,
+.s4,
+.s5,
+.s6 {
+  width: 70%;
+  display: flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  align-items: center;
+  padding-left: 15%;
+}
+
+.centerdiv1 {
+  column-gap: 20vw;
+  display: flex;
+  flex-direction: row;
+  margin-left: 8vw;
+}
+.centerdiv2 {
+  column-gap: 5vw;
+  display: flex;
+  flex-direction: row;
+}
+
+label {
+  width: 15vw;
+}
+input:focus,
+textarea:focus {
+  box-shadow: 1px 1px 10px #5be4e9;
+  border: 1px solid blanchedalmond;
+  outline: none;
+}
+
+input,
+textarea,
+select {
+  font-family: serif;
+  padding-left: 15px;
+  border: 2px solid #ccc;
+  outline: none;
+  border-radius: 20px;
+  width: 20vw;
+  height: 25px;
+}
+
+@media screen and (max-width: 786px) {
+  .centerdiv1 {
+    column-gap: 7vw;
+  }
+  i.fa-male,
+  i.fa-female {
+    width: 55px;
+    height: 45px;
+    font-size: 40px;
+  }
+  .description-div {
+    flex-direction: column;
+  }
+  .centerdiv2 {
+    width: 100%;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  input {
+    width: 100%;
+  }
+  label {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .s7 {
+    flex-direction: column;
+  }
+  #textareatext1,
+  #textareatext2 {
+    width: 100%;
+  }
+  input[type="submit"] {
+    height: 40px;
+    width: 100px;
+    font-size: 14px;
+  }
+  .link1 {
+    font-size: 16px;
+  }
+  button.tablinks {
+    font-size: 8px;
+  }
+  .body {
+    overflow: hidden; /* Hide scrollbars */
+  }
+}
+
+.footersocaildiv {
+  padding: 70px 0;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  column-gap: 30px;
+  color: honeydew;
+}
+.footerlinks {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  column-gap: 30px;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  color: honeydew;
+}
+
+.footerlinks p:hover {
+  color: #f48c34;
+}
+.social:hover {
+  color: #f48c34;
+}
+
+.text-center {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  color: rgb(191, 211, 191);
+  padding-bottom: 10px;
+}
+
+label {
+  font-family: "Rhodium Libre", serif;
+}
+
+.submitdiv {
+  width: 70%;
+  margin-left: 15%;
+  padding: 32px 0;
+  text-align: right;
+}
+
+.submit {
+  background-color: brown;
+  width: 170px;
+  height: 45px;
+  border-radius: 150px;
+  font-size: 1.5rem;
+  color: aliceblue;
+  font-family: "Rhodium Libre", serif;
+}
+.tabcontent {
+  height: 1000px;
+}
